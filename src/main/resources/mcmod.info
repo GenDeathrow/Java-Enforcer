@@ -1,0 +1,16 @@
+[
+{
+  "modid": "java_enforcer",
+  "name": "Java Enforcer",
+  "description": "This Mod will crash the game informing the player they have the incorrect Java version for the Mod Pack",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://minecraft.curseforge.com/members/GenDeathrow",
+  "updateUrl": "",
+  "authorList": ["GenDeathrow"],
+  "credits": "Darkosto & FunwayGuy for continued patreon support",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
