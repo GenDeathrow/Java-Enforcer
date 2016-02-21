@@ -18,7 +18,7 @@ echo "" >> full_changelog.txt
 
 # Create document for update notice
 echo $newversion> version.txt
-echo "https://github.com/GenDeathrow/CutScenes-1.7.10/wiki/Downloads" >> version.txt
+echo "https://github.com/GenDeathrow/Java-Enforcer/wiki/Downloads" >> version.txt
 echo. >> version.txt
 git log -1 --pretty=format:"%B" >> version.txt
 
