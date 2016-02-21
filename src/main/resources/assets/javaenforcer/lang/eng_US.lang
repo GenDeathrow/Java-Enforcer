@@ -1,0 +1,7 @@
+language.name=English
+
+updatemsg.javaenforcer.available=Update %s of Java Enforcer is available
+updatemsg.javaenforcer.download=Download & Changelog:
+updatemsg.javaenforcer.uptodate=Java Enforcer %s is up to date
+updatemsg.javaenforcer.debug=Java Enforcer %s is a debug version
+updatemsg.javaenforcer.error=An error occurred while parsing EnviroMine's version file!

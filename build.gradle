@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.1"
+version = "GD_JE_VER"
 group= "com.gendeathrow.javaenforcer" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "aa_java_enforcer"
 
