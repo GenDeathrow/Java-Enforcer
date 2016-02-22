@@ -27,7 +27,6 @@ public class UpdateChecker
 	@SubscribeEvent
 	public void onPlayerLogin(PlayerLoggedInEvent event)
 	{
-		System.out.println("tst");
 		hasChecked = true;
 		displayUpdateCheck(event);
 	}
@@ -36,7 +35,7 @@ public class UpdateChecker
 	private void displayUpdateCheck(PlayerLoggedInEvent event)
 	{
 
-		// File link: http://bit.ly/1r4JJt3;
+		// File link: http://bit.ly/1OooLeO;
 		// DO NOT CHANGE THIS!
 		if(JavaEnforcer.VERSION == "GD_" + "JE" + "_VER")
 		{
@@ -71,27 +70,27 @@ public class UpdateChecker
 			{
 				event.player.addChatMessage(new ChatComponentTranslation("updatemsg.javaenforcer.available", version).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
 				event.player.addChatMessage(new ChatComponentTranslation("updatemsg.javaenforcer.download"));
-				event.player.addChatMessage(new ChatComponentText("http://minecraft.curseforge.com/projects/java-enforcer/latest").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.BLUE).setUnderlined(true)));
-				for(int i = 3; i < data.length; i++)
-				{
-					if(i > 6)
-					{
-						event.player.addChatMessage(new ChatComponentText("" + (data.length - 7) + " more..."));
-						break;
-					} else
-					{
-						event.player.addChatMessage(new ChatComponentText(EnumChatFormatting.RESET + "" + data[i].trim()));
-					}
-				}
+				event.player.addChatMessage(new ChatComponentText("http://minecraft.curseforge.com/projects/java-enforcer/").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.BLUE).setUnderlined(true)));
+//				for(int i = 3; i < data.length; i++)
+//				{
+//					if(i > 6)
+//					{
+//						event.player.addChatMessage(new ChatComponentText("" + (data.length - 7) + " more..."));
+//						break;
+//					} else
+//					{
+//						event.player.addChatMessage(new ChatComponentText(EnumChatFormatting.RESET + "" + data[i].trim()));
+//					}
+//				}
 			} else if(verStat == 0)
 			{
-				event.player.addChatMessage(new ChatComponentText(EnumChatFormatting.YELLOW + StatCollector.translateToLocalFormatted("updatemsg.enviromine.uptodate", JavaEnforcer.VERSION)));
+				event.player.addChatMessage(new ChatComponentText(EnumChatFormatting.YELLOW + StatCollector.translateToLocalFormatted("updatemsg.javaenforcer.uptodate", JavaEnforcer.VERSION)));
 			} else if(verStat == 1)
 			{
-				event.player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + StatCollector.translateToLocalFormatted("updatemsg.enviromine.debug", JavaEnforcer.VERSION)));
+				event.player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + StatCollector.translateToLocalFormatted("updatemsg.javaenforcer.debug", JavaEnforcer.VERSION)));
 			} else if(verStat == -2)
 			{
-				event.player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + StatCollector.translateToLocalFormatted("updatemsg.enviromine.error")));
+				event.player.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + StatCollector.translateToLocalFormatted("updatemsg.javaenforcer.error")));
 			}
 			
 		} catch(IOException e)
@@ -156,9 +155,6 @@ public class UpdateChecker
 		return page;
 	}
 
-	
-
-	
 	
 	/**
 	 * Will compare Versions numbers and give difference

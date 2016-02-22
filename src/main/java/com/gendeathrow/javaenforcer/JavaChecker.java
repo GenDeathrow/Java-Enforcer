@@ -17,24 +17,20 @@ public class JavaChecker
 		Logger logger = JavaEnforcer.logger;
 		
 		JavaEnforcer.JAVA_VERSION = getJavaVersion();
-		//if (true)
+
 		if(JavaEnforcer.JAVA_VERSION < JavaEnforcer.JAVA_ENFORCER) 
 		{
 			String msg = "This Modpack requires Java Version "+ JavaEnforcer.JAVA_ENFORCER +". You have version "+ JavaEnforcer.JAVA_VERSION +". Go to "+ JavaEnforcer.http;
 		
 			String msgpop = "<html><center><p> This Modpack requires <font Color=red>Java Version "+ JavaEnforcer.JAVA_ENFORCER +"</font>. <br> You have version "+ JavaEnforcer.JAVA_VERSION +".<br> "+ JavaEnforcer.customMSG +"  <br> <br>  <br> <br> Java Enforcer will take you to the download page <Br><font Color=Blue><color Go to "+ JavaEnforcer.http +"</font>";
 			
-			final JFrame parent = new JFrame();
-            
-            parent.setSize(400, 400);
-            
-            JOptionPane.showMessageDialog(parent, msgpop, "Inane error",  JOptionPane.ERROR_MESSAGE);
-
-            logger.log(Level.INFO, msg);
+			Utils.popUpError(msg, msgpop);
+			
+			logger.log(Level.ERROR, msg);
 		
             gotoHttp();
         
-            logger.log(Level.INFO, msg);
+            logger.log(Level.ERROR, msg);
 		
             throw new RuntimeException(msg);
 		}
